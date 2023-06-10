@@ -25,37 +25,37 @@ static void input(Freq *);
 static void swap_ch(Freq *, char, char);
 static void str_cop(char *, char *);
 
-char cipher[] =
+static char cipher[] =
     "MDTNOHQY NDG XQQH TLHYREKTRQG, DHG RNQYQ VQEQ GOYREOXKRQG RL RNQ DXVQNE, "
     "VNOTN XQZDH KYOHZ RNQM OH 1944. QDYQ LC MDOHRQHDHTQ VDY HLR D YRELHZ "
     "BLOHR LC RNQ YZ-41. EQMLFDS LC RNQ TLFQE OHFLSFQG EQMLFOHZ\n\n";
 
-char cipher2[] =
+static char cipher2[] =
     "KIJ I OBUXIGFUIT UFPXBR LBYFUB OIEFGH QJB SD ZXB PRFGUFPTB SD JTFLFGH ZKS "
     "PRFGZBL JZRFPJ IHIFGJZ SGB IGSZXBR IUUSRLFGH ZS I PRBJURFABL PTIG ZS "
     "HBGBRIZB ZXB UFPXBR BNQFYITBGZJ.\n\n";
 
-char cipher3[] =
+static char cipher3[] =
     "TG OZCHS YWFA UADHWEAS GYA AVTXPW MAHZO GYA HAFAH ZR STFTJTZV. VTVAGAAV "
     "RZUGI-RTFA OWJ GZZ HWGA; TR TG YWS MAAV TVGUZSCEAS TV 1942, TG EZCHS YWFA "
     "EYWVXAS GYA EZCUJA ZR GYA OWU.\n\n";
 
-char cipher4[] =
+static char cipher4[] =
     "YBZXYSSU TBKXKTYSXN WXLV SKTB LW YJL HSG-JLXO VZMSO KPRBKASYN JSXS "
     "JXZYYSU LU YBS WZMSO AKNS, KUO YBS LYBSX YBZXYSSU LW SKTB LU YBS YLR KUO "
     "ALYYLV\n\n";
 
-char cipher5[] =
+static char cipher5[] =
     "HXQ SQOIBED XBC B SUUC XQBC DHBOH WE HXQ PUEDHOLPHWUE UG IQPXBEWPBR "
     "POATHUCQKWPQD JQGUOQ HXQ JQSWEEWES UG VUORC VBO WW VWHX QEWSIB, BEC "
     "CQKQRUTQC QFPQRRQEH QEPWTXQOQC HQRQTOWEHQO CQKWPQD VWHX HXQ H-52D "
     "BEC\n\n";
 
-char mapping[] =
+static char mapping[] =
     "\tA <------> V\n\tB <------> T\n\tC <------> F\n\tD <------> I\n\tE "
     "<------> Y\n\tG <------> L\n\tH <------> S\n\tJ <------> R\n\tK <------> "
     "W\n\tM <------> X\n\tN <------> U\n\tO <------> P\n\tQ <------> Z\n\n";
 
-char common[] = "ETAOIN SHRDLU\n\n";
+static char common[] = "ETAOIN SHRDLU\n\n";
 
 #endif
