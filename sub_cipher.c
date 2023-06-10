@@ -12,8 +12,12 @@ void run()
 
 	while (1)
 		frequency_analysis(&f);
+
 	free(f.str);
 	free(f.char_freq);
+
+	f.str       = NULL;
+	f.char_freq = NULL;
 }
 
 static void str_cop(char *s, char *c)
@@ -47,10 +51,6 @@ static int compare(const void *a, const void *b)
     alpha_sort[0] = highest frequency char
     alpha_sort[25] = lowest frequency char
 
-    Address values 'MUST' be mapped to
-    orignal index after sorting method
-
-    ie addresses can't be in sequential order
  */
 static void sort_frequency(Freq *f)
 {
@@ -92,7 +92,6 @@ static void display_freq_analysis(Freq *f)
 }
 
 static void swap_ch(Freq *f, char swap1, char swap2)
-
 {
 	char *s = f->str;
 
