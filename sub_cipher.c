@@ -1,3 +1,4 @@
+#include <ctype.h>
 #ifndef _SUB_CHIPER
 #include "sub_cipher.h"
 #endif
@@ -110,6 +111,7 @@ static void input(Freq *f)
 
 	printf("\n%s", "Enter char 1 and char 2: ");
 	scanf(" %c %c", &c1, &c2);
+	assert((isalpha(c1) && isalpha(c2)) && isupper(c1) && isupper(c2));
 	swap_ch(f, c1, c2);
 }
 
