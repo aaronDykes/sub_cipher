@@ -6,9 +6,9 @@ void run()
 {
 	Freq f;
 	f.char_freq = calloc(alphabet, sizeof(int));
-	f.str       = malloc(sizeof(char) * (int)encrypted_length(cipher5));
+	f.str       = malloc(sizeof(char) * (int)encrypted_length(cipher));
 
-	str_cop(f.str, cipher5);
+	str_cop(f.str, cipher);
 
 	while (1)
 		frequency_analysis(&f);

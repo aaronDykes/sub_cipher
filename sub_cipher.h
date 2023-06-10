@@ -7,7 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define alphabet 26
+#define alphabet            26
+#define encrypted_length(X) sizeof(X) / sizeof(X[0])
 
 struct freq {
 	int  *char_freq;
@@ -56,7 +57,5 @@ char mapping[] =
     "W\n\tM <------> X\n\tN <------> U\n\tO <------> P\n\tQ <------> Z\n\n";
 
 char common[] = "ETAOIN SHRDLU\n\n";
-
-#define encrypted_length(X) sizeof(X) / sizeof(X[0])
 
 #endif
