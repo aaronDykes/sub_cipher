@@ -1,4 +1,3 @@
-#include <ctype.h>
 #ifndef _SUB_CHIPER
 #include "sub_cipher.h"
 #endif
@@ -51,7 +50,6 @@ static int compare(const void *a, const void *b)
 /**
     alpha_sort[0] = highest frequency char
     alpha_sort[25] = lowest frequency char
-
  */
 static void sort_frequency(Freq *f)
 {
