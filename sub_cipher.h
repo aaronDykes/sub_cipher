@@ -10,11 +10,11 @@
 #define alphabet            26
 #define encrypted_length(X) sizeof(X) / sizeof(X[0])
 
-struct freq {
+static struct freq {
 	int  *char_freq;
 	int  *alpha_sort[alphabet];
 	char *str;
-} freq = {NULL, {0}};
+} freq = {NULL, {0}, NULL};
 
 typedef struct freq Freq;
 

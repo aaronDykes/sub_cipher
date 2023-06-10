@@ -24,7 +24,7 @@ static void str_cop(char *s, char *c)
 
 static void frequency_analysis(Freq *f)
 {
-	char *s = f->str + 0;
+	char *s = f->str;
 	for (int i = 0; i < alphabet; i++)
 		*(f->char_freq + i) = 0;
 
@@ -65,9 +65,9 @@ static void sort_frequency(Freq *f)
 
 static void display_freq_analysis(Freq *f)
 {
-	char *s1 = f->str + 0;
-	char *s2 = mapping + 0;
-	char *s3 = common + 0;
+	char *s1 = f->str;
+	char *s2 = mapping;
+	char *s3 = common;
 
 	for (int i = 0; i < alphabet; i++) {
 		if (((i % 2) == 0) && i != 0)
@@ -94,7 +94,7 @@ static void display_freq_analysis(Freq *f)
 static void swap_ch(Freq *f, char swap1, char swap2)
 
 {
-	char *s = f->str + 0;
+	char *s = f->str;
 
 	while (*s) {
 		if (*s == swap1)
