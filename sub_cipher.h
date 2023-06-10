@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define alphabet            26
-#define encrypted_length(X) sizeof(X) / sizeof(X[0])
+#define ALPHABET         26
+#define ENCRYPTED_LEN(X) sizeof(X) / sizeof(X[0])
 
 static struct freq {
 	int  *char_freq;
-	int  *alpha_sort[alphabet];
+	int  *alpha_sort[ALPHABET];
 	char *str;
 } freq = {NULL, {0}, NULL};
 

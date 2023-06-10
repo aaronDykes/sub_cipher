@@ -5,8 +5,8 @@
 void run()
 {
 	Freq f;
-	f.char_freq = calloc(alphabet, sizeof(int));
-	f.str       = malloc(sizeof(char) * (int)encrypted_length(cipher));
+	f.char_freq = calloc(ALPHABET, sizeof(int));
+	f.str       = malloc(sizeof(char) * (int)ENCRYPTED_LEN(cipher));
 
 	str_cop(f.str, cipher);
 
@@ -29,7 +29,7 @@ static void str_cop(char *s, char *c)
 static void frequency_analysis(Freq *f)
 {
 	char *s = f->str;
-	for (int i = 0; i < alphabet; i++)
+	for (int i = 0; i < ALPHABET; i++)
 		*(f->char_freq + i) = 0;
 
 	while (*s) {
@@ -54,10 +54,10 @@ static int compare(const void *a, const void *b)
  */
 static void sort_frequency(Freq *f)
 {
-	for (int i = 0; i < alphabet; i++)
+	for (int i = 0; i < ALPHABET; i++)
 		*(f->alpha_sort + i) = (f->char_freq + i);
 
-	qsort(f->alpha_sort, alphabet, sizeof(int *), compare);
+	qsort(f->alpha_sort, ALPHABET, sizeof(int *), compare);
 	printf("\n");
 
 	display_freq_analysis(f);
@@ -69,7 +69,7 @@ static void display_freq_analysis(Freq *f)
 	char *s2 = mapping;
 	char *s3 = common;
 
-	for (int i = 0; i < alphabet; i++) {
+	for (int i = 0; i < ALPHABET; i++) {
 		if (((i % 2) == 0) && i != 0)
 			printf("\n");
 		printf(
