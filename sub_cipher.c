@@ -6,9 +6,9 @@ void run()
 {
 	Freq f;
 	f.char_freq = calloc(ALPHABET, sizeof(int));
-	f.str       = malloc(sizeof(char) * (int)ENCRYPTED_LEN(cipher));
+	f.str       = malloc(sizeof(char) * (int)ENCRYPTED_LEN(cipher5));
 
-	str_cop(f.str, cipher);
+	str_cop(f.str, cipher5);
 
 	while (1)
 		frequency_analysis(&f);
@@ -32,11 +32,9 @@ static void frequency_analysis(Freq *f)
 	for (int i = 0; i < ALPHABET; i++)
 		*(f->char_freq + i) = 0;
 
-	while (*s) {
+	for (; *s; s++)
 		if (isalpha(*s))
 			*(f->char_freq + *s - 'A') += 1;
-		s++;
-	}
 
 	sort_frequency(f);
 }
@@ -94,13 +92,11 @@ static void swap_ch(Freq *f, char swap1, char swap2)
 {
 	char *s = f->str;
 
-	while (*s) {
+	for (; *s; s++)
 		if (*s == swap1)
 			*s = swap2;
 		else if (*s == swap2)
 			*s = swap1;
-		s++;
-	}
 }
 
 static void input(Freq *f)
