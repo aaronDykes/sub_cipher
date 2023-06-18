@@ -74,14 +74,8 @@ static void display_freq_analysis(Freq *f)
 		    **(f->alpha_sort + i)
 		);
 	}
-	while (*s2)
-		printf("%c", *s2++);
 
-	while (*s3)
-		printf("%c", *s3++);
-
-	while (*s1)
-		printf("%c", *s1++);
+	printf("%s%s%s", s2, s3, s1);
 
 	input(f);
 }
