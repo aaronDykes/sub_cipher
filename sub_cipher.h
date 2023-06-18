@@ -52,10 +52,10 @@ static char cipher5[] =
     "BEC\n\n";
 
 static char mapping[] =
-    "\tA <------> V\n\tB <------> T\n\tC <------> F\n\tD <------> I\n\tE "
+    "\n\n\tA <------> V\n\tB <------> T\n\tC <------> F\n\tD <------> I\n\tE "
     "<------> Y\n\tG <------> L\n\tH <------> S\n\tJ <------> R\n\tK <------> "
     "W\n\tM <------> X\n\tN <------> U\n\tO <------> P\n\tQ <------> Z\n\n";
 
-static char common[] = "ETAOIN SHRDLU\n\n";
+static char common[] = "\nCommon characters: ETAOIN SHRDLU\n\n";
 
 #endif

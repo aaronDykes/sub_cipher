@@ -74,11 +74,9 @@ static void display_freq_analysis(Freq *f)
 		    **(f->alpha_sort + i)
 		);
 	}
-	printf("\n\n");
 	while (*s2)
 		printf("%c", *s2++);
 
-	printf("\nCommon characters: ");
 	while (*s3)
 		printf("%c", *s3++);
 
@@ -108,4 +106,3 @@ static void input(Freq *f)
 	assert((isalpha(c1) && isalpha(c2)) && isupper(c1) && isupper(c2));
 	swap_ch(f, c1, c2);
 }
-
