@@ -63,7 +63,6 @@ static void sort_frequency(Freq *f)
 static void display_freq_analysis(Freq *f)
 {
 	char *s1 = f->str;
-	char *s2 = mapping;
 	char *s3 = common;
 
 	for (int i = 0; i < ALPHABET; i++) {
@@ -75,7 +74,7 @@ static void display_freq_analysis(Freq *f)
 		);
 	}
 
-	printf("%s%s%s", s2, s3, s1);
+	printf("%s%s", s3, s1);
 
 	input(f);
 }
